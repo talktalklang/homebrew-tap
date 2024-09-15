@@ -6,7 +6,7 @@ class Talktalk < Formula
   license "BSD-3-Clause"
 
   def install
-    bin.install "TalkTalk/talk"
-    prefix.install "TalkTalk/TalkTalk_TalkTalkCore.bundle"
+    bin.install "talk"
+    prefix.install "TalkTalk_TalkTalkCore.bundle"
   end
 end
