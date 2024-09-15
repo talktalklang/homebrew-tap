@@ -7,6 +7,6 @@ class Talktalk < Formula
 
   def install
     bin.install "talk"
-    prefix.install "TalkTalk_TalkTalkCore.bundle"
+    bin.install "TalkTalk_TalkTalkCore.bundle"
   end
 end
