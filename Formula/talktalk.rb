@@ -6,14 +6,20 @@ class Talktalk < Formula
   license "BSD-3-Clause"
 
   def install
-    bin.install "talk"
-    libexec.install "TalkTalk_TalkTalkCore.bundle"
+    # Install the talk executable into libexec
+    libexec.install "talk"
 
-    # Create a wrapper script to set the environment variable for the bundle path
+    # Install the resource bundle into libexec as well
+    libexec.install "TalkTalk_TalkTalkCore.bundle"
+  
+    # Create a wrapper script in bin that points to the talk executable in libexec
     (bin/"talk").write <<~EOS
       #!/bin/bash
-      export TALKTALK_BUNDLE_PATH=#{libexec}/TalkTalk_TalkTalkCore.bundle
-      exec "#{bin}/talk" "$@"
+      export TALK_BUNDLE_PATH=#{libexec}/TalkTalk_TalkTalkCore.bundle
+      exec "#{libexec}/talk" "$@"
     EOS
+
+    # Ensure the wrapper script is executable
+    chmod "+x", bin/"talk"
   end
 end
