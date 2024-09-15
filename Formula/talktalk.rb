@@ -1,11 +1,12 @@
 class TalkTalk < Formula
   desc "The TalkTalk programming language"
   homepage "https://github.com/talktalklang/talktalk"
-  url "https://github.com/talktalklang/talktalk/releases/download/0.0.1/talk.zip"
-  sha256 "0fe0956fd3c3c38dc96d7cfaec503df3b610e03f15fdf3b70f0763e291020b6a"
+  url "https://github.com/talktalklang/talktalk/releases/download/0.0.1/TalkTalk.zip"
+  sha256 "4cecb5c4d4988079a0d7fb3099c757306f7a6435ea9c4dd544d452b7b75742a9"
   license "BSD-3-Clause"
 
   def install
-    bin.install "talk"
+    bin.install "TalkTalk/talk"
+    prefix.install "TalkTalk/TalkTalk_TalkTalkCore.bundle"
   end
 end
