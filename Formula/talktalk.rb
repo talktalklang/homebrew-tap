@@ -1,4 +1,4 @@
-class TalkTalk < Formula
+class Talktalk < Formula
   desc "The TalkTalk programming language"
   homepage "https://github.com/talktalklang/talktalk"
   url "https://github.com/talktalklang/talktalk/releases/download/0.0.1/TalkTalk.zip"
