@@ -1,8 +1,8 @@
 class Talktalk < Formula
   desc "The TalkTalk programming language"
   homepage "https://github.com/talktalklang/talktalk"
-  url "https://github.com/talktalklang/talktalk/releases/download/0.0.2/TalkTalk_macos_arm64.zip"
-  sha256 "6011aa25df3b5fc8582c45547e5717c2d98b2d7a4713e82e7c05d2663bb5d62f"
+  url "https://github.com/talktalklang/talktalk/releases/download/0.0.4/TalkTalk_macos_arm64.zip"
+  sha256 "2f883bf78c765605474ebd13b1c416749cbbe6d7fc7d1df034380fb71077c060"
   license "BSD-3-Clause"
 
   def install
